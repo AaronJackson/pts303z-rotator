@@ -18,7 +18,6 @@ export default class TCPRotator {
 
 	    sock.on('data', data => {
 		const str = data.toString();
-		console.log(str);
 		switch (str[0]) {
 		case 'p': // get_pos
 		    sock.write(`${this.pelco.pan}\n`);

@@ -6,7 +6,7 @@ export default class PelcoD {
 	this.port = port;
 
 	this.FULL_RIGHT = 35000;
-	this.FULL_UP = 4950;
+	this.FULL_UP = 9222;
     };
 
     prepareCommand(cmd1, cmd2, data1, data2) {
@@ -36,7 +36,9 @@ export default class PelcoD {
 	    // it was 35 degree swing each way
 	    // up max 23 ,  down max 29
 	    name = 'tilt';
-	    this.tilt = (value / this.FULL_UP) * (29+23) - 29;
+	    console.log(value);
+	    this.tilt = (value / this.FULL_UP) * (112-20) - 10; // not 20;
+	    // this.tilt = (value / this.FULL_UP) * -1 * (20-112);
 	    break;
 
 	default:
