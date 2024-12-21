@@ -1,6 +1,6 @@
 $fn = 200;
 
-tube_dia = 35;
+tube_dia = 34.9;
 
 // The base
 difference() {
